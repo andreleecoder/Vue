@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>curso Vue</title>
 </head>
 <body>
-    
+    <div id="app">
+        <p>{{msg}}</p>
+        <p>{{everdade ? 'verade':'falso'}}</p>
+        <p>{{frutas[0]+' e '+frutas[1]}}</p>
+        <p>Aluno :{{aluno.nome }}</p>
+        <p>{{fun()}}</p>
+        
+
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+            new Vue({
+               el:'#app',
+              
+               data:{
+                msg:'teste de mensagem',
+                everdade: true,
+                frutas:['pera','uva','maçã'],
+                aluno:{nome:'Paula'},
+                fun: ()=> {
+                    return 'mensagem da função'
+                }
+               } 
+            })
+            </script>
 </body>
 </html>
